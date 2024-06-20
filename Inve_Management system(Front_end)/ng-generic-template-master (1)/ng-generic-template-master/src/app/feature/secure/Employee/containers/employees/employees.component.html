@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="search-bar">
+    
+      <input class="form-control me-2" type="search" [(ngModel)]="searchValue" placeholder="Search By Name" aria-label="Search" (input)="onSearch()">
+  </div>
+  
+  
+  <div class="button-container">
+    <button type="button" class="btn btn-primary custom-button-add " [routerLink]="['employee/insert']"><i class="pi pi-user-plus"> Add </i></button>
+  </div>
+  <br><br><br>
+  
+
+  
+   
+      <div class="row">
+        <div class="col" *ngFor="let list of employees">
+          <div class="card" style="width: 18rem;"  >
+        
+              <img src="{{ list.image }}" width="284px" height="300px" alt="Image cap">
+            
+            <div class="card-body">
+              <h2 class="card-title">Name: {{list.name}}</h2>
+              <h4>Designation: {{list.designationName}}</h4>
+              <h4>Date Of Birth: {{list.dob | date:'dd-MM-yyyy'}}</h4>
+              <h4 class="card-text" >Email: {{list.email}}</h4>
+  
+              
+            </div>
+           
+            <div class="card-body">
+         
+            <button class="btn btn-primary custom-button " icon="pi pi-pen-to-square" [routerLink]="['employee/edit',list.employeeId]"><i class="pi pi-pen-to-square"> Edit </i></button> |
+           
+            <a class="btn btn-danger custom-delete-btn" icon="pi pi-trash" (click)="delete(list.employeeId)"><i class="pi pi-trash"> Delete </i> </a>
+            </div>
+          </div>
+          <br>
+          
+        </div>
+      </div>
+    </div>
+  
+

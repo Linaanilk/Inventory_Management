@@ -1,0 +1,126 @@
+.custom-btn {
+    background-color: rgb(19, 102, 12);
+    /* You can adjust other styles like border-color, text color, etc., as needed */
+  }
+  .button-container {
+    padding-top:5px;
+    padding-bottom: 15px;
+    position: absolute;
+    //top: 5px; /* Adjust top position as needed */
+    right: 10px; /* Adjust right position as needed */
+  }
+  .image-container {
+    width: 100%; /* Ensure images fill their container */
+  }
+
+  .image-container img {
+    width: 287px; /* Set width to 100% of container */
+    height: 280px; /* Automatically adjust height to maintain aspect ratio */
+  }
+  .container-fluid {
+    /* width: 200px; */ /* You can set width if needed */
+    padding-top: 50px;
+    height: 250px; /* Set the height */
+    //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+}
+.custom-button {
+  /* Add your custom styles here */
+  /* For example: */
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgb(42, 154, 127); /* Bootstrap primary color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+  
+}
+
+.custom-button:hover{
+  background-color: rgb(8, 77, 55); /* Darken the color on hover */
+}
+
+.custom-button i {
+  margin-right: 5px; /* Add space between icon and text */
+}
+.custom-delete-btn {
+  /* Add your custom styles here */
+  /* For example: */
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgb(225, 83, 83); /* Bootstrap primary color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+  
+}
+
+.custom-delete-btn:hover{
+  background-color: rgb(202, 28, 28); /* Darken the color on hover */
+}
+
+.custom-delete-btn i {
+  margin-right: 5px; /* Add space between icon and text */
+}
+
+.custom-button-add {
+  /* Add your custom styles here */
+  /* For example: */
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgb(42, 181, 137); /* Bootstrap primary color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+  
+}
+
+.custom-button-add:hover{
+  background-color: rgb(14, 102, 87); /* Darken the color on hover */
+}
+
+.custom-button-add i {
+  margin-right: 5px; /* Add space between icon and text */
+}
+.search-bar{
+  padding: 40px;
+}
+
+.container{
+  margin-top: 80px;
+}
+
+.card {
+  width: 18rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 600px;
+  transition: box-shadow 0.3s ease; /* Add transition effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-weight: bold;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Shadow effect on hover */
+}

@@ -1,0 +1,93 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+.custom-table {
+  padding-top: 50px;
+    width: 100%;
+    //border-collapse: collapse;
+  }
+  .sub{
+    float: right;
+  }
+  .custom-table th, .custom-table td {
+    padding-top: 50px;
+    border: 1px solid #fdf8f8;
+    padding: 8px;
+  }
+  
+  .custom-table th {
+   
+    background-color: #ecf2f1;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+  }
+  .mat-card-title
+  {
+    text-align: center;
+  }
+  .button-edit
+  {
+    background-color: rgb(49, 128, 104);
+    color: white;
+  }
+  thead {
+    background-color: #943030; /* Set background color */
+  }
+  
+  thead th {
+    color: #f9f6f6; /* Set text color */
+  }
+
+  
+  
+  .custom-table th {
+    /* Add 1px solid border with light gray color */
+    padding: 8px; /* Add padding */
+  }
+  
+ 
+  .custom-btn-green {
+    background-color: rgb(227, 236, 233);
+    border-color: rgb(228, 236, 235);
+    color: black;
+  }
+  .custom-btn-green:hover {
+    background-color: #75d1c1; /* Darken the color on hover */
+  }
+  .custom-delete{
+    background-color: rgb(227, 236, 233);
+    color: black;
+    border-color: #f9f6f6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.custom-delete:hover {
+  background-color: #e45858; /* Darken the color on hover */
+}
+
+  .custom-button {
+    /* Add your custom styles here */
+    /* For example: */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #309881; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+    
+}
+
+.custom-button:hover {
+    background-color: #237542; /* Darken the color on hover */
+}
+
+.custom-button i {
+    margin-right: 0px; /* Add space between icon and text */
+}
+
+.container{
+  margin-top: 80px;
+}
+

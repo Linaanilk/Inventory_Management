@@ -1,0 +1,62 @@
+<!-- <nggt-page-layout>
+    <nggt-page-layout-header>
+        <h1 class="mat-h1">Profile</h1>
+    </nggt-page-layout-header>
+    <nggt-page-layout-content>
+
+    </nggt-page-layout-content>
+</nggt-page-layout> -->
+<div class="container">
+<div class="col-lg-6">
+    <div class="card mb-4" >
+      <div class="card-body">
+        <div class="row">
+            <div class="profile-pic">
+                <img src="{{image}}" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                <p class="mb-1" >Employee ID:{{employeeId}}</p>
+            </div>
+            
+            <br>
+
+           <div class="col-sm-4">
+            <p class="mb-0">Full Name</p>
+          </div>
+          <div class="col-sm-8">
+            <p class="text-muted mb-0">{{employeeName}}</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+              <p class="mb-0">Designation</p>
+            </div>
+            <div class="col-sm-8">
+              <p class="text-muted mb-0">{{designation}}</p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-4">
+              <p class="mb-0">Date Of Birth</p>
+            </div>
+            <div class="col-sm-8">
+              <p class="text-muted mb-0">{{dob|date}}</p>
+            </div>
+          </div>
+          <hr>
+        <div class="row">
+          <div class="col-sm-4">
+            <p class="mb-0">Email</p>
+          </div>
+          <div class="col-sm-8">
+            <p class="text-muted mb-0">{{Email}}</p>
+          </div>
+        </div>
+        <hr>
+        <button class="btn btn-edit" style="float: right;" [routerLink]="['profile/profile-update',employeeId]"><i class="pi pi-pencil"></i></button>
+
+        <button class="btn btn-prime" style="display: block; margin: 0 auto;" [routerLink]="['/auth/forgot-password']">Change Password</button>
+
+      </div>
+    </div>
+  </div>

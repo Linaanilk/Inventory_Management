@@ -1,0 +1,63 @@
+.dialog-modal {
+  padding: 20px;
+}
+
+.invoice-details {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+.dialog-modal{
+
+  height:30rem;
+}
+.print-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background-color: #0056b3;
+}
+
+
+// @media print {
+//   body * {
+//     visibility: hidden;
+//   }
+//   .print, .print * {
+//     visibility: visible;
+//     //border: 1px solid black; /* Add a border to the dialog-modal */
+//     padding: 10px; /* Add some padding for spacing */
+//   }
+//   .print {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     width: 100%; /* Ensure the modal takes full width when printing */
+//     //box-sizing: border-box; /* Include padding and border in the width */
+//   }
+
+
+
+
+
+

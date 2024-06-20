@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                        <!-- Hidden input for productId -->
+                        <!-- <input type="text" formControlName="productId" class="form-control" [hidden]="!productId"> -->
+
+                        <!-- ProductName input -->
+                        <div class="mb-3">
+                            <label for="supplierName" class="form-label">Supplier Name</label>
+                            <input type="text" id="supplierName" formControlName="supplierName" class="form-control">
+                            <div *ngIf="form.get('supplierName')?.errors?.required && form.get('supplierName')?.touched" class="error">Supplier Name should not be null</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="categoryId">CategoryName</label>
+                            <select id="categoryId" formControlName="categoryId" class="form-control">
+                            <option *ngFor="let category of catName" [value]="category.categoryId">{{ category.categoryName }}</option>
+                            </select>
+                            <div *ngIf="form.get('categoryId')?.errors?.required && form.get('categoryId')?.touched" class="error">Category field should not be null</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="productId">ProductName</label>
+                            <select id="productId" formControlName="productId" class="form-control">
+                                <option *ngFor="let product of productName" [value]="product.productId">{{product.name}}</option>
+                                
+                            </select>
+                            <div *ngIf="form.get('productId')?.errors?.required && form.get('productId')?.touched" class="error">Product field should not be null</div>
+                        </div>
+
+   
+
+                        <!-- Unit Price input -->
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" id="address" formControlName="address" class="form-control">
+                            <div *ngIf="form.get('address')?.errors?.required && form.get('address')?.touched" class="error">Address field should not be null</div>
+                        </div>
+
+                        <!-- Product Description input -->
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label">Quantity</label>
+                            <input type="text" id="quantity" formControlName="quantity" class="form-control">
+                            <div *ngIf="form.get('quantity')?.errors?.min && form.get('quantity')?.touched" class="error">Minimum quantity is 50</div>
+                            <div *ngIf="form.get('quantity')?.errors?.required && form.get('quantity')?.touched" class="error">Quantity field should not be null</div>
+                        </div>
+                        
+
+                        <!-- Add or Update button -->
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">{{ supplierId ? 'Update' : 'Add' }}</button>
+                            <!-- <button type="submit" class="btn btn-primary">Add</button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

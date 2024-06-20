@@ -1,0 +1,51 @@
+<!-- <nggt-page-layout>
+  <nggt-page-layout-header>
+    <h1 class="mat-h1">Dashboard</h1>
+  </nggt-page-layout-header>
+  <nggt-page-layout-content>
+    Content goes here..
+  </nggt-page-layout-content>
+</nggt-page-layout> -->
+
+<div class="img-inventory">
+  <div class="overlay">
+  
+  </div>
+<div class="card-container">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Count Of All Products</h3>
+      
+      <h1 class="card-text">{{TotalQuantity}} products</h1>
+    
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Products Out Of Stock</h3>
+     
+      <h1 class="card-text">{{OutOfStockQty}} products</h1>
+  
+      
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Products Overstocked</h3>
+      
+      <h1 class="card-text">{{j}} products</h1>
+     
+    </div>
+  </div>
+</div>
+
+<div  class="card-chart mx-auto">
+<div class="bar-chart ms-auto" >
+ 
+    <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
+</div>
+</div>
+</div>
+
+

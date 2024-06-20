@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-body">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="mb-2">
+              <label for="designationName">Designation Name</label>
+              <input type="text" id="designationName" formControlName="designationName" class="form-control">
+              <div *ngIf="form.get('designationName')?.errors?.CheckRoleExists && form.get('designationName')?.touched" class="error">Role Already exists</div>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

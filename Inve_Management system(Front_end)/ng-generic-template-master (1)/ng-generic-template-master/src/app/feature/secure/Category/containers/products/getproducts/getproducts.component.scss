@@ -1,0 +1,74 @@
+.custom-btn {
+    background-color: rgb(19, 102, 12);
+    /* You can adjust other styles like border-color, text color, etc., as needed */
+  }
+  .button-container {
+    position: absolute;
+    //top: 5px; /* Adjust top position as needed */
+    left: 10px; /* Adjust right position as needed */
+  }
+  .container{
+    margin-top: 100px;
+  }
+  /* styles.css */
+.card {
+  width: 18rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 600px;
+  transition: box-shadow 0.3s ease; /* Add transition effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-weight: bold;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Shadow effect on hover */
+}
+.custom-button {
+  /* Add your custom styles here */
+  padding: 8px 16px; /* Adjust padding for a larger button size */
+  border-radius: 5px;
+  background-color: #309881; /* Bootstrap primary color */
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px; /* Adjust font size for better visibility */
+}
+.custom-button:hover {
+  background-color: #2f574f; /* Darken the color on hover */
+}
+
+.delete-button{
+  padding: 8px 16px; /* Adjust padding for a larger button size */
+  border-radius: 5px;
+  background-color: #e74c3b; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px; 
+}
+.delete-button:hover {
+  background-color: #d73827; /* Darken the color on hover */
+}
+.disabled-card {
+  opacity: 0.5; /* Example: reduce opacity to visually indicate disabled state */
+  pointer-events: none; /* Example: disable pointer events to prevent interactions */
+}

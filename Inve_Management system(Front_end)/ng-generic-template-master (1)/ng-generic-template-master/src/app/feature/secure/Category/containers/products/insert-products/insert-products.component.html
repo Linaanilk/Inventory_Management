@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                        <!-- Hidden input for productId -->
+                        <!-- <input type="text" formControlName="productId" class="form-control" [hidden]="!productId"> -->
+
+                        <!-- ProductName input -->
+                        <div class="mb-3">
+                            <label for="productName" class="form-label">Product Name</label>
+                            <input type="text" id="productName" formControlName="productName" class="form-control">
+                            <div *ngIf="form.get('productName')?.errors?.required && form.get('productName')?.touched" class="error">Product Name should not be null</div>
+                            
+                            <div *ngIf="form.get('productName')?.errors?.CheckProductExits && form.get('productName')?.touched" class="error">Product Name Already Exists</div>
+                           
+                         </div> 
+
+                        <!-- Unit Price input -->
+                        <div class="mb-3">
+                            <label for="unitPrice" class="form-label">Unit Price</label>
+                            <input type="text" id="unitPrice" formControlName="unitPrice" class="form-control">
+                            <div *ngIf="form.get('unitPrice')?.errors?.min && form.get('unitPrice')?.touched" class="error">Unit Price should not be less than 5</div>
+                            <div *ngIf="form.get('unitPrice')?.errors?.required && form.get('unitPrice')?.touched" class="error">Image Link should not be null</div>
+                        </div>
+
+                        <!-- Product Description input -->
+                        <div class="mb-3">
+                            <label for="productDescription" class="form-label">Description</label>
+                            <input type="text" id="productDescription" formControlName="productDescription" class="form-control">
+                            <div *ngIf=" form.get('productDescription')?.touched && form.get('productDescription')?.errors?.required" class="error">Description should not be null</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="productImage" class="form-label">Image link</label>
+                            <input type="text" id="productImage" formControlName="productImage" class="form-control">
+                            <div *ngIf="form.get('productImage')?.errors?.required && form.get('productImage')?.touched" class="error">Image Link should not be null</div>
+                        </div>
+
+                        <!-- Add or Update button -->
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary custom-button">{{ productId ? 'Update' : 'Add' }}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+
+<div class="dialog-modal">
+ <div id="print">
+  <h2>INVOICE ID: {{ invoices.invoiceId }}</h2>
+  
+  <div class="invoice-details">
+    
+    <p>Date: {{ date | date}}</p>
+    <p>Customer Name: {{ userDetails[0].userName }}</p>
+    <p>Address: {{ userDetails[0].address }}</p>
+   
+   
+    
+    <table>
+      <thead>
+        <tr>
+          <th>OrderId</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Product Name</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of invoiceDetails">
+          <td>{{ order.orderId }}</td>
+          <td>{{ order.quantity }}</td>
+          <td>{{ order.price }}</td>
+          <td>{{ order.productName }}</td>
+        </tr>
+        
+      </tbody>
+     
+    </table>
+    <p>Total Amount: Rs{{invoices.totalAmount}}</p>
+   
+  </div>
+</div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close class="close-button">Close</button> |
+    <button class="print-button" (click)="print()">
+       Print
+    </button>
+  </div>
+</div>
+
+  

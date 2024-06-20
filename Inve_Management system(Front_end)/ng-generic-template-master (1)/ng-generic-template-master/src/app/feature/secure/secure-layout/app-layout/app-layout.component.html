@@ -1,0 +1,40 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+        <mat-toolbar color="primary" style="background-color: rgb(95, 189, 167);">
+            <img src="https://cdn.dribbble.com/users/445066/screenshots/3176562/attachments/675758/inventory_management_app_icon_2_2x.png" alt="Full Screen" class="icon">
+
+            <span style="font-size: small; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);padding-left: .5rem;">InveLabs</span>
+        </mat-toolbar>
+        <mat-nav-list *ngFor="let item of navigationItems">
+            <a mat-list-item [routerLink]="[item.url]" *ngIf="item.AllowedRole.includes(role)"><i class="{{item.icon}} mx-2" ></i> {{item.text}} </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar class="topbar">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+            *ngIf="isHandset$ | async">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+      
+          <span class="example-spacer"></span>
+      
+          <div class="toolbar-icons">
+            <button mat-button class="pad-button">
+              <mat-icon class="icon pad-button" matBadgeColor="warn" [routerLink]="['/dashboard']">home</mat-icon>
+            </button>
+            
+            <button mat-button [matMenuTriggerFor]="userMenu" class="pad-button">
+              <mat-icon class="icon pad-button">account_circle</mat-icon>
+            </button>
+            
+            <mat-menu #userMenu="matMenu">
+              <button mat-menu-item (click)="gotoProfile()">Profile</button>
+              <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+          </div>
+        </mat-toolbar>
+        <ng-content></ng-content>
+      </mat-sidenav-content>
+      
+</mat-sidenav-container>

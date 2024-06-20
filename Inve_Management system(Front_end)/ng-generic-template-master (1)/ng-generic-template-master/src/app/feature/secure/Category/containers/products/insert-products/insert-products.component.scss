@@ -1,0 +1,74 @@
+.container{
+  margin-top: 90px;
+}
+  
+  .form-col {
+    padding: 0 15px; /* Adjust padding as needed */
+  }
+  
+  .cat-button {
+    margin-top: 20px; /* Adjust margin-top as needed */
+    text-align: center;
+    width: 50%; /* Set the width to match the input fields */
+    padding: .375rem .75rem; /* Match the padding of the input fields */
+    font-size: 1rem; /* Match the font size of the input fields */
+    line-height: 1.5; /* Match the line height of the input fields */
+    color: #fff; /* Text color */
+    background-color: #51d5bf; /* Button background color */
+    border: 1px solid #4d9886; /* Button border */
+    border-radius: .25rem; /* Button border radius */
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }
+  
+  .cat-button:hover {
+    background-color: #51d5bf; /* Change background color on hover */
+    border-color: #4e988c; /* Change border color on hover */
+  }
+  
+  
+/* Optional: Add styles for form inputs */
+.form-floating input[type="text"] {
+    width: 50%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+  
+  /* Hover effect */
+  .form-floating input[type="text"]:hover {
+    border-color: #007bff; /* Change border color on hover */
+  }
+  
+  
+  /* Optional: Add styles for form labels */
+  .form-floating label {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .error {
+    color: rgb(20, 18, 18);
+    border: 1px solid red; /* Add a border */
+    padding: 10px; /* Add padding */
+    background-color: #ffe6e6; /* Add a background color */
+    border-radius:5px;
+  }
+  .custom-button {
+    /* Add your custom styles here */
+    padding: 8px 16px; /* Adjust padding for a larger button size */
+    border-radius: 5px;
+    background-color: #48b099; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Adjust font size for better visibility */
+  }
+  .custom-button:hover {
+    background-color: #418275; /* Darken the color on hover */
+  }

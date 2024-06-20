@@ -1,0 +1,30 @@
+
+<h1 class="heading">DAILY REPORT</h1>
+<div class="search-bar">
+    <input class="form-control search" type="date" [(ngModel)]="searchValue" placeholder="Search By Date"
+      aria-label="Search" (input)="onSearch()">
+  </div>
+  
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Sl No.</th>
+                <th>User</th>
+                <th>Total Amount</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let list of invoices; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{list.user.userName}}</td>
+                <td>{{list.totalAmount}}</td>
+                <td>{{list.invoiceDate|date}}</td>
+            </tr>
+        </tbody>
+       
+    </table>
+    <br>
+    <h2 *ngIf="searchedProduct">Total Sale: Rs{{totalAmount}}</h2>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-body">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="mb-2">
+              <label for="categoryId">Category ID</label>
+              <input type="text" id="categoryId" [value]="categoryId" readonly class="form-control">
+            </div>
+            <div class="mb-2">
+              <label for="categoryName">Category Name</label>
+              <input type="text" id="categoryName" formControlName="categoryName" class="form-control">
+            <div *ngIf="form.get('categoryName')?.errors?.required && form.get('categoryName')?.touched" class="error">Category Name should not be null</div>
+            </div>
+            <div class="mb-2">
+              <label for="categoryImage">Image</label>
+              <input type="text" id="categoryImage" formControlName="categoryImage" class="form-control">
+              <div *ngIf="form.get('categoryImage')?.errors?.required && form.get('categoryImage')?.touched" class="error">Image Link should not be null</div>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary custom-button">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

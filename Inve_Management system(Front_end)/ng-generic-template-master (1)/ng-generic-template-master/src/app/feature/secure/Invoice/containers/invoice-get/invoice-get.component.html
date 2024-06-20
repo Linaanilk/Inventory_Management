@@ -1,0 +1,61 @@
+<div class="container">
+
+  <mat-card-title class="card-title">Invoice</mat-card-title>
+
+  <form class="row mb-3" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="col-md-9" style="padding-left: 30px;">
+      <!-- <label for="customerId" class="form-label">Customer Name</label> -->
+      <select id="customerId" formControlName="customerId" class="form-select">
+        <!-- <option value="">Select Customer</option> -->
+        <option *ngFor="let customer of customers" [value]="customer.userId">{{ customer.userName }}</option>
+      </select>
+    </div>
+    <div class="col-md-3 d-flex align-items-end">
+      <button class="btn btn-primary" type="submit">Generate</button>
+    </div>
+  </form>
+
+  <mat-card>
+
+    <section>
+      <div class="table-responsive">
+        <table class="table custom-table">
+          <thead class="table-header">
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Customer</th>
+              <th scope="col">Date</th>
+              <th scope="col">Total Amount</th>
+              <th scope="col">Actions</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let list of invoices,let i = index">
+              <td>{{ list.invoiceId}}</td>
+              <td>
+                <div > {{list.user.userName }}</div>
+              </td>
+              <td>{{ list.createdDate | date }}</td>
+              <td>
+                {{ list.totalAmount }}
+
+              </td>
+
+              <td><button mat-icon-button (click)="openModal(list.userId,list.createdDate,list)">
+                  <mat-icon>print</mat-icon>
+                </button></td>
+
+
+            </tr>
+
+          </tbody>
+          <tfoot>
+            <tr>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+  </mat-card>
+</div>

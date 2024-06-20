@@ -1,0 +1,67 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .card-body {
+    padding: 50px;
+    margin-left:10px
+  }
+  
+  .img-fluid {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .row {
+    margin-bottom: 10px; /* Add space between each row */
+    margin-left:10px
+  }
+  
+  .col-sm-4 {
+    font-weight: bold;
+  }
+  
+  .col-sm-8 {
+    color: #6c757d; /* Gray color for text-muted */
+  }
+  .profile-pic{
+    padding-bottom: 40px;
+    padding-left:85px;
+  }
+  .col-lg-6 {
+    padding-left: 50px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mb-1
+  {
+    padding-left:20px;
+    padding-top:10px;
+    font-weight: bold;
+    font-size: 150%;
+  }
+  .container{
+    margin-top: 80px;
+}
+  .btn-prime{
+    background-color: rgb(68, 198, 178);
+  
+    color: white;
+  }
+  .btn-prime:hover{
+    background-color: rgb(80, 138, 130);
+    color: white;
+  }
+  .btn-edit{
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px;
+  }

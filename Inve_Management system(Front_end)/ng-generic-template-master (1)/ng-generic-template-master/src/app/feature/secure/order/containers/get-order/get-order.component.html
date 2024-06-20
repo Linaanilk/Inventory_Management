@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="search-bar">
+        <form class="row mb-3" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="col-md-6" style="padding-left: 30px;">
+              <label for="customerId" class="form-label">Customer Name</label>
+              <select id="customerId" formControlName="customerId" class="form-select">
+                <option *ngFor="let customer of customers" [value]="customer.userId">{{ customer.userName }}</option>
+              </select>
+            </div>
+            <div class="col-md-3" style="padding-left: 30px;">
+              <label for="startDate" class="form-label">Date</label>
+              <input id="startDate" formControlName="startDate" type="date" class="form-control">
+              <div *ngIf="form.get('startDate')?.errors?.checkDate && form.get('startDate')?.touched" class="error">Invalid date</div>
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+              <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+          </form>
+          
+      </div>
+      
+    <br><br>
+    <div class="button-container">
+        <button type="button" class=" btn btn-primary custom-button" [routerLink]="['orders/addOrders']">
+        Add
+    </button>
+    
+        <!-- <button type="button" class=" btn btn-primary custom-button" [routerLink]="['/invoice']">Generate Invoice</button> -->
+    </div>
+    <br><br>
+    <div class="row" *ngIf="!searchPerformed">
+        <div class="col-sm-4" *ngFor="let list of orders">
+            <div class="card"  [ngClass]="{'disabled-card': list.createdDate !== currentdate}" >
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <div>
+                            <h4>{{list.createdDate|date}}</h4>
+                            <!-- <p>Current Date: {{ currentDate }}</p> -->
+                            <h2>Product Name: {{ list.productName }}</h2>
+                            <h3>Customer: {{ list.customerName }}</h3>
+                            <!-- Add any other order details you want to display -->
+                        </div>
+                    </h5>
+                    <p class="card-text">Quantity: {{ list.quantity }}</p>
+                    <p class="card-text">Price: {{ list.price }}</p>
+                    
+    
+                    <!-- <p class="card-text">Price:{{list.price}}</p>-->
+                    <button class="btn btn-primary custom-button" [routerLink]="['orders/editOrders', list.orderId]">
+                        <i class="pi pi-pen-to-square"></i> Edit Order
+                    </button>
+                    
+                      
+                    <!-- <button class="btn btn-primary" [routerLink]="['orders/getInvoice', list.orderId]" type="submit">Invoice</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="searchPerformed">
+        <div class="col-sm-4" *ngFor="let list of searchedOrders">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <div>
+                            <h2>Product Name: {{ list.productName }}</h2>
+                            <h3>Customer: {{ list.customerName }}</h3>
+                            <!-- Add any other order details you want to display -->
+                        </div>
+                    </h5>
+                    <p class="card-text">Quantity: {{ list.quantity }}</p>
+                    <p class="card-text">Price: {{ list.price }}</p>
+                    
+    
+                    <!-- <p class="card-text">Price:{{list.price}}</p>-->
+                    <button class="btn btn-primary custom-button" [routerLink]="['orders/editOrders', list.orderId]">
+                        <i class="pi pi-pen-to-square"></i> Edit Order
+                    </button>
+                    
+                      
+                    <!-- <button class="btn btn-primary" [routerLink]="['orders/getInvoice', list.orderId]" type="submit">Invoice</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

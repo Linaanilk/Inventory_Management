@@ -1,0 +1,35 @@
+<div class="container">
+ 
+    <input class="form-control me-2" type="search" [(ngModel)]="searchValue" placeholder="Search products here" aria-label="Search" (input)="onSearch()">
+   
+  <br>
+  <div class="button-container">
+    <button type="button" class="btn btn-primary" [routerLink]="['/category/addproducts', id]" class="custom-button">Add</button>
+  </div>
+  <br>
+  <br>
+  <br>
+  
+  <div class="container-fluid" >
+    <div class="row">
+      <div class="col" *ngFor="let list of products">
+        <div class="card" style="width: 18rem;" [ngClass]="{'disabled-card': list.quantity < 1}">
+          <img src="{{ list.image }}" width="100%" height="300px" alt="Image cap"> 
+          <div class="card-body">
+            <h2 class="card-title">{{ list.name }}</h2>
+            <h4>{{ list.productDescription }}</h4>
+            <h4 style="font-weight: bold;" *ngIf="list.quantity>1">Quantity: {{ list.quantity }}</h4>
+            <h4 style="font-weight: bold;" *ngIf="list.quantity<1">Out Of Stock</h4>
+            <h4 class="card-text" style="font-weight: bold;">Price: &#x20B9;{{ list.unitPrice }}</h4>
+          </div>
+          <div class="card-body">
+            <a class="btn btn-primary" [routerLink]="['/category/updateproducts', id, list.productId]"  class="custom-button">Edit</a> |
+            <a class="btn btn-danger" (click)="delete(list.productId)">Delete</a>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+  
+</div>

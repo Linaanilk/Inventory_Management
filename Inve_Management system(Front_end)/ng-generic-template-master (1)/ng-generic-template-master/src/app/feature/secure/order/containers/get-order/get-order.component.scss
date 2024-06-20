@@ -1,0 +1,67 @@
+.row{
+    margin: 10px;
+}
+  .custom-btn {
+    background-color: rgb(19, 102, 12);
+    /* You can adjust other styles like border-color, text color, etc., as needed */
+  }
+  .button-container {
+    position: absolute;
+    right: 10px;
+    //top: 10px; /* Adjust the top position if needed */
+}
+
+
+.card {
+    width: 300px; /* Adjust width as needed */
+    height: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Horizontal offset, Vertical offset, Blur radius, Spread radius, Color */
+    margin-bottom: 20px;
+}
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+}
+
+.card-title {
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+.custom-button {
+    /* Add your custom styles here */
+    /* For example: */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #309881; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.custom-button:hover {
+    background-color: #237542; /* Darken the color on hover */
+}
+
+.custom-button i {
+    margin-right: 5px; /* Add space between icon and text */
+}
+.search-bar{
+    padding-top:20px;
+}
+.container{
+    margin-top: 80px;
+  }
+
+  .disabled-card {
+    opacity: 0.5; /* Example: reduce opacity to visually indicate disabled state */
+    pointer-events: none; /* Example: disable pointer events to prevent interactions */
+  }
+  

@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                        <!-- Hidden input for productId -->
+                        <!-- <input type="text" formControlName="productId" class="form-control" [hidden]="!productId"> -->
+
+                        <!-- ProductName input -->
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Shop Name</label>
+                            <input type="text" id="userName" formControlName="userName" class="form-control">
+                            <div *ngIf="form.get('userName')?.errors?.required && form.get('userName')?.touched" class="error">Name field should not be null</div>
+                        </div>
+
+                        <!-- Unit Price input -->
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" id="address" formControlName="address" class="form-control">
+                            <div *ngIf="form.get('address')?.errors?.required && form.get('address')?.touched" class="error">Address field should not be null</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">{{ userId ? 'Update' : 'Add' }}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

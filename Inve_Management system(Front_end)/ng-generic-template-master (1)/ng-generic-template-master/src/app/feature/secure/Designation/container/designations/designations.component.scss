@@ -1,0 +1,49 @@
+
+  .custom-btn-green {
+    /* Add your custom styles here */
+    /* For example: */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: white; /* Bootstrap primary color */
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+    
+}
+
+.custom-btn-green:hover {
+    background-color: rgb(126, 123, 116); /* Darken the color on hover */
+}
+
+.custom-btn-green i {
+    margin-right: 5px; /* Add space between icon and text */
+}
+.header-cell {
+  background-color: #007bff; /* Blue */
+  color: white;
+  padding: 10px;
+}
+
+.container {
+ // margin-top:20px;
+ margin: 10rem 10rem 2rem 5rem;
+}
+.custom-button {
+  margin: 2rem 0rem 20rem 45rem;
+  // margin-top: 200px;
+  // padding: 10px 20px;
+  // text-align: center;
+  // text-decoration: none;
+  // font-size: 16px;
+  // margin: 4px 2px;
+  // cursor: pointer;
+  // border-radius: 4px;
+}
+.button-container {
+  display: flex;
+ // justify-content: flex-end; /* Aligns items to the end of the flex container */
+ // margin-top: 10px; /* Adjust as needed */
+}
+

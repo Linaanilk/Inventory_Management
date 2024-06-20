@@ -1,0 +1,58 @@
+
+ .row{
+    overflow: hidden;
+ }
+.card-body{
+    background-color: rgb(105, 197, 181);
+    border-radius: 10px;
+}
+img {
+    //background-image: url('https://uploads-ssl.webflow.com/60edc0a8835d5b38bf11f03f/61cf04ea45898934315251e5_Inventory-management-system-objectives.png');
+    background-size: cover; /* This property ensures that the background image covers the entire div */
+   // background-position: center; /* This property centers the background image within the div */
+    width: 100%; /* Set the width of the div */
+    height: 100vh; /* Set the height of the div */
+    //opacity: 0.8; /* Set the opacity of the background image */
+    //position: absolute; /* Position the image absolutely within its container */
+    top: 0; /* Align the image to the top of its container */
+    right: 0; /* Align the image to the right side of its container */
+}
+
+.card{
+    margin-top: 80px;
+   // height: 100%;
+    //border-radius: 25px;
+}
+.card-title{
+    
+    text-align: center;
+    color:rgb(33, 84, 67);
+    font-weight: bold;
+    font-size: 40px;
+    padding-bottom:30px ;
+}
+.btn{
+    
+    background-color: rgb(166, 232, 221);
+    display: block;
+    
+   // margin: ms-auto;
+
+}
+
+.btn:hover{
+    background-color: rgb(101, 202, 185);
+}
+.col-md-5{
+    margin-top: 120px;
+   // background-color: rgb(166, 232, 221);
+}
+.smaller-textbox {
+    width: 450px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    
+    /* Additional styling if necessary */
+}
+input{
+    border:2px solid rgb(50, 147, 139);
+}

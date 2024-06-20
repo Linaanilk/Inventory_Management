@@ -1,0 +1,18 @@
+.container{
+    margin-top: 110px;
+}
+.profile-pic{
+    object-fit: cover;
+}
+.employee-profile {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.employee-id {
+    margin-left: 150px; /* Adjust as needed */
+}
+
+.profile-pic {
+    margin-left: 140px; /* Adjust as needed */
+}

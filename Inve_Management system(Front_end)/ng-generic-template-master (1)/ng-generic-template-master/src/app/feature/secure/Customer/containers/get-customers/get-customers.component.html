@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row pt-3">
+    <div class="col col-xl-4">
+      <div class="search-bar mx-auto">
+        <input class="form-control search " type="search" [(ngModel)]="searchValue" placeholder="Search Customers"
+          aria-label="Search" (input)="onSearch()">
+      </div>
+    </div>
+      <div class="col col-xl-4"></div>
+      <div class="col col-xl-4">
+        <button type="submit" class="custom-button ms-auto sub" [routerLink]="['customer/insert-customers']">
+          <i class="pi pi-user-plus"></i>
+        </button>
+      </div>
+  </div>
+
+
+
+  <br>
+
+  <br>
+  <mat-card>
+    <mat-card-title>Shops</mat-card-title>
+    <section>
+      <table class="custom-table text-center">
+        <thead class="text-center">
+          <tr class="text-center">
+            <th class="text-center">Id</th>
+            <th class="text-center">ShopName</th>
+            <th class="text-center">Address</th>
+            <th colspan="2" class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let list of customers">
+            <td>{{ list.userId }}</td>
+            <td>{{ list.userName }}</td>
+            <td>{{list.address}}</td>
+            <td>
+              <button class="btn btn-primary custom-btn-green"
+                [routerLink]="['customer/update-customers', list.userId]">
+                <i class="pi pi-pen-to-square"></i>
+              </button> |
+              <button class="btn btn-danger custom-delete" (click)="Delete(list.userId)">
+                <i class="pi pi-trash"></i></button>
+            </td>
+
+          </tr>
+        </tbody>
+
+
+        <tfoot>
+
+
+        </tfoot>
+      </table>
+    </section>
+  </mat-card>
+
+</div>

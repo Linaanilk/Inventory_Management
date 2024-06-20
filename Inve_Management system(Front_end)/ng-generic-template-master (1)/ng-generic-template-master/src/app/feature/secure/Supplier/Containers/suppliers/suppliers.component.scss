@@ -1,0 +1,86 @@
+.custom-btn {
+    background-color: rgb(19, 102, 12);
+    /* You can adjust other styles like border-color, text color, etc., as needed */
+  }
+  .container{
+    padding-top: 60px;;
+  }
+  .button-container {
+    padding-top:20px;
+    //padding-bottom:20px;
+    position: absolute;
+    //top: 5px; /* Adjust top position as needed */
+    right: 10px; /* Adjust right position as needed */
+  }
+  
+.custom-button-add {
+  /* Add your custom styles here */
+  /* For example: */
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgb(42, 181, 137); /* Bootstrap primary color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+  
+}
+
+.custom-button-add:hover{
+  background-color: rgb(14, 102, 87); /* Darken the color on hover */
+}
+
+.custom-button-add i {
+  margin-right: 5px; /* Add space between icon and text */
+}
+
+.edit-button {
+  /* Add your custom styles here */
+  /* For example: */
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgb(227, 236, 233); /* Bootstrap primary color */
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+  
+}
+
+.edit-button:hover{
+  background-color: rgb(94, 179, 165); /* Darken the color on hover */
+}
+
+.custom-button-add i {
+  margin-right: 5px; /* Add space between icon and text */
+}
+.table{
+  padding-top:50px;
+}
+.delete-button {
+  /* Add your custom styles here */
+  /* For example: */
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgb(227, 236, 233); /* Bootstrap primary color */
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+  
+}
+
+.delete-button:hover{
+  background-color: rgb(247, 98, 98); /* Darken the color on hover */
+}
+.search-bar{
+  padding-top:20px;
+  width: 300px;
+  padding-left: 10px;
+}
+.containers{
+  margin-top: 80px;
+}

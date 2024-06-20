@@ -1,0 +1,43 @@
+.custom-btn {
+    background-color: rgb(19, 102, 12);
+    /* You can adjust other styles like border-color, text color, etc., as needed */
+  }
+  .button-container {
+   padding-top:20px;
+    position: absolute;
+    //top: 5px; /* Adjust top position as needed */
+    right: 10px; /* Adjust right position as needed */
+  }
+  .container-fluid {
+    padding-top: 80px;
+    //width: 100px; /* Set the width */
+    height: 250px; /* Set the height */
+   // box-shadow: 1 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+  }
+  .custom-green-button {
+    background-color: #28a745; /* Green color */
+    color: white; /* Text color */
+}
+::ng-deep {
+  .custom-green-button{
+    background: rgb(74, 186, 154);
+    background-color: rgb(74, 186, 154);
+  }
+}
+::ng-deep{
+  .custom-edit-button{
+    background-color: grey;;
+  }
+
+}
+
+::ng-deep{
+  .add-button{
+    background-color: #23cabc;
+    //outline-color: #45bea8; 
+  }
+}
+.container{
+  margin-top: 80px;
+}

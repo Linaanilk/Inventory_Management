@@ -1,0 +1,49 @@
+<div class="containers">
+    <div class="row pt-3">
+        <div class="col col-xl-4" mx-auto>
+            <div class="search-bar">
+
+                <input class="form-control me-2" type="search" [(ngModel)]="searchValue" placeholder="Search By Name"
+                    aria-label="Search" (input)="onSearch()">
+
+            </div>
+        </div>
+    
+    <div class="col col-xl-4"></div>
+    <div class="col col-xl-4">
+        <div class="button-container">
+            <button type="button" class="btn btn-primary custom-button-add" [routerLink]="['suppliers/addsuppliers']"><i
+                    class="pi pi-user-plus">Add</i></button>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center ">Supplier Name</th>
+                <th class="text-center ">Address</th>
+                <th class="text-center ">Quantity</th>
+                <th class="text-center ">Product Name</th>
+                <th class="text-center ">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let supplier of suppliers">
+                <td class="text-center ">{{ supplier.supplierName }}</td>
+                <td class="text-center ">{{ supplier.address }}</td>
+                <td class="text-center ">{{ supplier.quantity }}</td>
+                <td class="text-center ">{{ supplier.editedProductName }}</td>
+                <td class="text-center ">
+                    <a class="btn btn-primary edit-button"
+                        [routerLink]="['supplier/updatesuppliers', supplier.supplierId]"><i
+                            class="pi pi-pen-to-square"></i></a> |
+                    <button class="btn btn-danger delete-button" (click)="delete(supplier.supplierId)"><i
+                            class="pi pi-trash"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
